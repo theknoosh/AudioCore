@@ -1,9 +1,13 @@
-﻿Build started 1/14/2013 11:18:54 AM.
+﻿Build started 1/19/2013 4:54:13 PM.
      1>Project "C:\Users\darrell\documents\visual studio 2010\Projects\AudioCore\AudioCore\AudioCore.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\AudioCore.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DirectXFramework.cpp WinMain.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DirectXFramework.cpp tinystr.cpp tinyxml.cpp tinyxmlerror.cpp tinyxmlparser.cpp
+         tinyxmlparser.cpp
+         tinyxmlerror.cpp
+         tinyxml.cpp
+         tinystr.cpp
          DirectXFramework.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
      1>c:\users\darrell\documents\visual studio 2010\projects\audiocore\audiocore\directxframework.h(27): warning C4005: 'DIRECTINPUT_VERSION' : macro redefinition
@@ -15,15 +19,13 @@
      1>c:\users\darrell\documents\visual studio 2010\projects\audiocore\audiocore\directxframework.cpp(246): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
          Generating Code...
-         Compiling...
-         WinMain.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\darrell\documents\visual studio 2010\projects\audiocore\audiocore\directxframework.h(27): warning C4005: 'DIRECTINPUT_VERSION' : macro redefinition
-                 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h(42) : see previous definition of 'DIRECTINPUT_VERSION'
-         Generating Code...
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\darrell\documents\visual studio 2010\Projects\AudioCore\Debug\AudioCore.exe" /NOLOGO dinput8.lib dxguid.lib strmiids.lib fmodex_vc.lib dxerr.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AudioCore.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\darrell\documents\visual studio 2010\Projects\AudioCore\Debug\AudioCore.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\darrell\documents\visual studio 2010\Projects\AudioCore\Debug\AudioCore.lib" /MACHINE:X86 Debug\AudioManager.obj
          Debug\DirectXFramework.obj
+         Debug\tinystr.obj
+         Debug\tinyxml.obj
+         Debug\tinyxmlerror.obj
+         Debug\tinyxmlparser.obj
          Debug\WinMain.obj
          LINK : C:\Users\darrell\documents\visual studio 2010\Projects\AudioCore\Debug\AudioCore.exe not found or not built by the last incremental link; performing full link
          AudioCore.vcxproj -> C:\Users\darrell\documents\visual studio 2010\Projects\AudioCore\Debug\AudioCore.exe
@@ -36,4 +38,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.50
+Time Elapsed 00:00:04.96
