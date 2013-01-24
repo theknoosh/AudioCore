@@ -1,3 +1,12 @@
+/************************************************************************
+*  Program Name:         ResourceManager Core                                               
+*  Name:                 Aaron Saul                                                                                        
+*  Date:                 January 22nd 2013  
+*  Description:          loads data from XML file using tinyXML parser.                                                                                                                                                                    *
+*  Update:                                            
+*                                                     
+************************************************************************/
+#define SAFE_DELETE(a) { delete (a); (a) = NULL; }
 #include "ResourceManager.h"
 
 
@@ -5,6 +14,7 @@
 //=====================================================================================
 //--------------------Load Resource from XML File -------------------------------------
 //=====================================================================================
+
 bool cResourceManager::loadFromXMLFile(std::string Filename)
 {
 	TiXmlDocument doc(Filename.c_str());
@@ -84,4 +94,99 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 		}
 	}
 	return false;
+}
+
+
+//-----------------------------------------------------------------------------------------
+//=========================================================================================
+//--Search the cResource collection for resource of a given ID and return pointer to ------
+//--this resource if found, if not return a null pointer-----------------------------------
+//=========================================================================================
+
+cResource* cResourceManager::findResourcebyID(unsigned int UID)
+{
+	std::map<unsigned int, std::list<cResource*>>::iterator it;
+
+	//search through scopes
+	for(it=m_Resources.begin(); it != m_Resources.end(); it++)
+	{
+		if(!(*it).second.empty())
+		{
+			std::list<cResource*>::iterator list_it;
+
+			//Search through resources of scope
+			for(list_it=(*it).second.begin();list_it != (*it).second.end(); list_it++)
+			{
+				//if matches ID
+				if((*list_it)->m_ResourceID == UID)
+					return (*list_it);
+			}
+		}
+	}
+
+	return NULL;
+}
+
+
+//-----------------------------------------------------------------------------------------
+//=========================================================================================
+//----Clear method removes all cResources from collection maintained by resource manager --
+//=========================================================================================
+
+void cResourceManager::clear()
+{
+	std::map<unsigned int, std::list<cResource*>>::iterator it;
+
+	//Search through scopes
+	for(it=m_Resources.begin();it != m_Resources.end();it++)
+	{
+		if(!(*it).second.empty())
+		{
+			std::list<cResource*>::iterator list_it;
+
+			//Search through resources of the scope
+			for(list_it=(*it).second.begin();list_it != (*it).second.end();list_it++)
+			{
+				//delete resource object
+				(*list_it)->unload();
+				SAFE_DELETE(*list_it);
+			}
+
+			(*it).second.clear();
+		}
+
+		m_Resources.clear();
+	}
+}
+
+
+//---------------------------------------------------------------------------------------------
+//=============================================================================================
+//----set current scope should be called for every scene change in the game.  it accepts ------
+//----one parameter indicating the unique ID for the new scene which resource are to be loaded-
+//=============================================================================================
+
+void cResourceManager::setCurrentScope(unsigned int Scope)
+{
+	//unload old scope, if not global scope in this case global scope is Zero
+	if(m_CurrentScope != 0)
+	{
+		std::list<cResource*>::iterator list_it;
+
+		for(list_it = m_Resources[m_CurrentScope].begin();list_it != m_Resources[m_CurrentScope].end(); list_it++)
+		{
+			(*list_it)->unload();
+		}
+	}
+
+	m_CurrentScope = Scope;
+
+	//Load new scope
+	std::list<cResource*>::iterator list_it;
+
+	for(list_it = m_Resources[m_CurrentScope].begin(); list_it != m_Resources[m_CurrentScope].end(); list_it++)
+	{
+		(*list_it)->load();
+	}
+
 }
