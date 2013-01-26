@@ -13,6 +13,8 @@
 #include "fmod_memoryinfo.h"
 #include "fmod_output.h"
 
+#include "ResourceManager.h"
+
 class AudioManager
 {
 public:
@@ -50,4 +52,27 @@ private:
 	FMOD::Channel* sfxChannels[numSfxChannels];	// Channel for sound effects
 };
 
+//-------------------------------------------------------------------------------
+//===============================================================================
+//---------------------------Audio Resource class----------------------------
+//===============================================================================
+class cAudioResource : public cResource
+{
+public:
+	inline cAudioResource()
+	{
+		m_ResourceID = m_Scope = 0;
+		m_Type = RESOURCE_AUDIO;
+	}
+
+	~cAudioResource();
+	void load();
+	void unload();
+
+	// Get access for the sound variable
+	FMOD::Sound* GetSound(void){ return p_Sound;}
+
+private:
+	FMOD::Sound* p_Sound;
+};
 #endif

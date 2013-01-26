@@ -165,3 +165,38 @@ void AudioManager::SetSFXVolume(float volume)
 		result = sfxChannels[n]->setPaused(false);
 	}
 }
+
+//-------------------------------------------------------------------------------
+//===============================================================================
+//---------------------------Audio Resource class----------------------------
+//===============================================================================
+
+cAudioResource::~cAudioResource()
+{
+	unload();
+}
+	
+void cAudioResource::load()
+{
+	FMOD_MODE mode = FMOD_DEFAULT;
+	FMOD_RESULT result;
+	
+	result = AudioManager::GetInstance()->GetSystem()->
+		createSound(m_FileName.c_str(), mode, 0, &p_Sound);
+
+	// If sound loaded incorrectly, release it and set it to NULL
+	if(p_Sound != NULL)
+	{
+		p_Sound->release();
+		p_Sound = NULL;
+	}
+}
+	
+void cAudioResource::unload()
+{
+	if (p_Sound)
+	{
+		p_Sound->release();
+		p_Sound = NULL;
+	}
+}
