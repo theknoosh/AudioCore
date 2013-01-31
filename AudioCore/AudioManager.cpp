@@ -168,6 +168,53 @@ void AudioManager::SetSFXVolume(float volume)
 
 //-------------------------------------------------------------------------------
 //===============================================================================
+//---------------------------Load Data from XML----------------------------------
+//===============================================================================
+
+//Instantiates variables every time cResourceManager finds an audio asset
+
+cResource* AudioManager::loadResourceFromXML(TiXmlElement *Element)
+{
+	if(Element)
+	{
+		cAudioResource* Resource = new cAudioResource();
+
+		for(TiXmlAttribute* ElementAttrib = Element->FirstAttribute(); ElementAttrib; ElementAttrib= ElementAttrib->Next())
+		{
+			//examine our audio resource object
+			std::string AttribName = ElementAttrib->Name();
+			std::string AttribValue = ElementAttrib->Value();
+
+			if(AttribName=="UID")
+			{
+				Resource->m_ResourceID = atoi(AttribValue.c_str());
+			}
+			if(AttribName=="filename")
+			{
+				Resource->m_FileName = AttribValue;
+			}
+			if(AttribName=="scenescope")
+			{
+				Resource->m_Scope = atoi(AttribValue.c_str());
+			}
+			if(AttribName=="audio_type")
+			{
+				if(AttribValue=="default")
+					Resource->m_AudioType = AUDIO_TYPE_DEFAULT;
+				else if(AttribValue=="sfx")
+					Resource->m_AudioType = AUDIO_TYPE_SFX;
+				else if(AttribValue=="bgm")
+					Resource->m_AudioType = AUDIO_TYPE_BGM;
+			}
+
+		}
+		return Resource;
+	}
+	return NULL;
+}
+
+//-------------------------------------------------------------------------------
+//===============================================================================
 //---------------------------Audio Resource class----------------------------
 //===============================================================================
 

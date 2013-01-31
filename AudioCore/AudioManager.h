@@ -15,6 +15,8 @@
 
 #include "ResourceManager.h"
 
+typedef enum {AUDIO_TYPE_DEFAULT=0, AUDIO_TYPE_SFX=1, AUDIO_TYPE_BGM=2}AUDIO_TYPE;
+
 class AudioManager
 {
 public:
@@ -40,6 +42,8 @@ public:
 	// Volume adjustment methods
 	void SetBGMVolume(float volume);
 	void SetSFXVolume(float volume);
+
+	cResource* loadResourceFromXML(TiXmlElement *Element);
 
 private:
 	static AudioManager* instance;	// Singleton instance
@@ -69,6 +73,7 @@ public:
 	void load();
 	void unload();
 
+	AUDIO_TYPE m_AudioType;
 	// Get access for the sound variable
 	FMOD::Sound* GetSound(void){ return p_Sound;}
 

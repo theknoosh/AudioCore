@@ -1,12 +1,12 @@
-﻿Build started 1/23/2013 9:38:17 PM.
-     1>Project "C:\Users\Aaron\Documents\Visual Studio 2010\Projects\ResourceManager\AudioCore\AudioCore.vcxproj" on node 2 (build target(s)).
+﻿Build started 1/30/2013 10:36:29 PM.
+     1>Project "C:\Users\Aaron\Desktop\ResourceManager\AudioCore\AudioCore.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\AudioCore.unsuccessfulbuild".
+         Creating "Debug\AudioCore.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ResourceManager.cpp
          ResourceManager.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Aaron\Documents\Visual Studio 2010\Projects\ResourceManager\Debug\AudioCore.exe" /NOLOGO dinput8.lib dxguid.lib strmiids.lib fmodex_vc.lib dxerr.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AudioCore.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Aaron\Documents\Visual Studio 2010\Projects\ResourceManager\Debug\AudioCore.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Aaron\Documents\Visual Studio 2010\Projects\ResourceManager\Debug\AudioCore.lib" /MACHINE:X86 Debug\AudioManager.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Aaron\Desktop\ResourceManager\Debug\AudioCore.exe" /NOLOGO dinput8.lib dxguid.lib strmiids.lib fmodex_vc.lib dxerr.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AudioCore.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Aaron\Desktop\ResourceManager\Debug\AudioCore.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Aaron\Desktop\ResourceManager\Debug\AudioCore.lib" /MACHINE:X86 Debug\AudioManager.obj
          Debug\DirectXFramework.obj
          Debug\ResourceManager.obj
          Debug\tinystr.obj
@@ -14,15 +14,15 @@
          Debug\tinyxmlerror.obj
          Debug\tinyxmlparser.obj
          Debug\WinMain.obj
-         LINK : C:\Users\Aaron\Documents\Visual Studio 2010\Projects\ResourceManager\Debug\AudioCore.exe not found or not built by the last incremental link; performing full link
-         AudioCore.vcxproj -> C:\Users\Aaron\Documents\Visual Studio 2010\Projects\ResourceManager\Debug\AudioCore.exe
+         LINK : C:\Users\Aaron\Desktop\ResourceManager\Debug\AudioCore.exe not found or not built by the last incremental link; performing full link
+         AudioCore.vcxproj -> C:\Users\Aaron\Desktop\ResourceManager\Debug\AudioCore.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Aaron\Documents\Visual Studio 2010\Projects\ResourceManager\Debug\AudioCore.exe;#1" /manifest Debug\AudioCore.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Aaron\Desktop\ResourceManager\Debug\AudioCore.exe;#1" /manifest Debug\AudioCore.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file "Debug\AudioCore.unsuccessfulbuild".
          Touching "Debug\AudioCore.lastbuildstate".
-     1>Done Building Project "C:\Users\Aaron\Documents\Visual Studio 2010\Projects\ResourceManager\AudioCore\AudioCore.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Aaron\Desktop\ResourceManager\AudioCore\AudioCore.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.11
+Time Elapsed 00:00:05.21

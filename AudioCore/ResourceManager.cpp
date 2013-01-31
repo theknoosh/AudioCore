@@ -8,6 +8,7 @@
 ************************************************************************/
 #define SAFE_DELETE(a) { delete (a); (a) = NULL; }
 #include "ResourceManager.h"
+#include "AudioManager.h"
 
 
 //-------------------------------------------------------------------------------------
@@ -59,7 +60,7 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 
 							if(AttribValue=="audio")
 							{
-								//Resource = g_AudioManager->loadResourceFromXML(Element);  CAudioResource
+								//Resource = g_AudioManager.loadResourceFromXML(Element);     //will need to change when I find a spot to put global instances
 							}
 						}
 
