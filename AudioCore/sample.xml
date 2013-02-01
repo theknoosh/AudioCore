@@ -1,5 +1,16 @@
 <?xml version="1.0" ?>
-<resources>
-	<resource UID = "1" type = "audio" filename = "myAudio.mp3" scenescope = "1" width="0" height="0"></resource>
-	<resource UID = "0" type = "graphic" filename = "myGraphic.png" scenescope = "1" width="800" height="600"></resource>
-</resources>	
+<AudioResources>
+ <resource UID = "1" type = "audio" filename = "BombDrop.mp3" scenescope = "1"></resource>
+ <resource UID = "2" type = "audio" filename = "bull_1.mp3" scenescope = "1"></resource>
+ <resource UID = "3" type = "audio" filename = "DrumLoop.mp3" scenescope = "1"></resource>
+ <resource UID = "4" type = "audio" filename = "machineGunFire.mp3" scenescope = "1"></resource>
+ <resource UID = "5" type = "audio" filename = "MenuOpeningMusic.mp3" scenescope = "1"></resource>
+ <resource UID = "6" type = "audio" filename = "Military.mp3" scenescope = "1"></resource>
+ <resource UID = "7" type = "audio" filename = "MilitaryGameOverClip.mp3" scenescope = "1"></resource>
+ <resource UID = "8" type = "audio" filename = "SmallExplosion.mp3" scenescope = "1"></resource>
+ <resource UID = "9" type = "audio" filename = "Woop Woop.mp3" scenescope = "1"></resource>
+</AudioResources>
+
+<ImageResources>
+<resource UID = "0" type = "graphic" filename = "myGraphic.png" scenescope = "1" width="800" height="600"></resource>
+</ImageResources>
