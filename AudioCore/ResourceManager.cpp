@@ -10,6 +10,11 @@
 #include "ResourceManager.h"
 #include "AudioManager.h"
 
+AudioManager* g_audioManager;
+
+
+
+
 
 //-------------------------------------------------------------------------------------
 //=====================================================================================
@@ -59,8 +64,8 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 							}
 
 							if(AttribValue=="audio")
-							{
-								//Resource = g_AudioManager.loadResourceFromXML(Element);     //will need to change when I find a spot to put global instances
+							{	
+								Resource = g_audioManager->loadResourceFromXML(Element);
 							}
 						}
 

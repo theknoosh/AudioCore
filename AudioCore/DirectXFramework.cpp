@@ -11,6 +11,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <DxErr.h>
+#include "ResourceManager.h"
+
+
+cResourceManager* resourceManager;
+
 
 CDirectXFramework::CDirectXFramework(void)
 {
@@ -34,6 +39,7 @@ void CDirectXFramework::Init(HWND& hWnd, HINSTANCE& hInst, bool bWindowed)
 	HRESULT hr;
 	TCHAR *ErrorMessage;
 
+	
 
 	//////////////////////////////////////////////////////////////////////////
 	// Direct3D Foundations - D3D Object, Present Parameters, and D3D Device
@@ -99,6 +105,14 @@ void CDirectXFramework::Init(HWND& hWnd, HINSTANCE& hInst, bool bWindowed)
 		&m_pD3DDevice);			// returned device pointer
 
 	//*************************************************************************
+	//////////////////////////////////////////////////////////////////////////
+	// Start resource manager
+	//////////////////////////////////////////////////////////////////////////
+	
+	resourceManager->loadFromXMLFile("Resources.xml");
+	resourceManager->setCurrentScope(0);
+
+	//*************************************************************************
 
 	//////////////////////////////////////////////////////////////////////////
 	// Create a Font Object
@@ -159,6 +173,7 @@ void CDirectXFramework::Init(HWND& hWnd, HINSTANCE& hInst, bool bWindowed)
 	D3DXCreateTextureFromFile(m_pD3DDevice, L"TeamATitle.png",&m_pTexture);
 
 }
+
 
 void CDirectXFramework::Update(float dt)
 {
