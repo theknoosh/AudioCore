@@ -11,6 +11,8 @@
 //Tiny XML header, needs tinyXML library
 #include "tinyxml.h"
 
+
+
 //Enum to indicate resource type
 typedef enum{
 	RESOURCE_NULL = 0,
