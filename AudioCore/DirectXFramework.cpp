@@ -14,7 +14,7 @@
 #include "ResourceManager.h"
 
 
-cResourceManager* resourceManager;
+cResourceManager* resourceManager = new cResourceManager();
 
 
 CDirectXFramework::CDirectXFramework(void)

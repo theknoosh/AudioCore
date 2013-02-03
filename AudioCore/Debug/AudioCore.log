@@ -1,4 +1,4 @@
-﻿Build started 2/2/2013 6:10:37 PM.
+﻿Build started 2/3/2013 3:16:54 PM.
      1>Project "C:\Users\Aaron\Desktop\ResourceManager\AudioCore\AudioCore.vcxproj" on node 2 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\AudioCore.lastbuildstate".
@@ -46,4 +46,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:22.02
+Time Elapsed 00:00:13.44
