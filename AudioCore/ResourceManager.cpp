@@ -140,7 +140,6 @@ cResource* cResourceManager::findResourcebyID(unsigned int UID)
 	return NULL;
 }
 
-
 //-----------------------------------------------------------------------------------------
 //=========================================================================================
 //----Clear method removes all cResources from collection maintained by resource manager --

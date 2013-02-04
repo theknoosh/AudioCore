@@ -10,7 +10,13 @@
 
 //Tiny XML header, needs tinyXML library
 #include "tinyxml.h"
-
+#include "fmod.h"
+#include "fmod.hpp"
+#include "fmod_codec.h"
+#include "fmod_dsp.h"
+#include "fmod_errors.h"
+#include "fmod_memoryinfo.h"
+#include "fmod_output.h"
 
 
 //Enum to indicate resource type
@@ -39,6 +45,7 @@ public:
 	virtual ~cResource(){};
 	virtual void load(){};
 	virtual void unload(){};
+	virtual FMOD::Sound* GetSound() = 0;
 
 	inline cResource()
 	{

@@ -15,6 +15,8 @@
 
 
 cResourceManager* resourceManager = new cResourceManager();
+cResource* soundResource;
+int timer;
 
 
 CDirectXFramework::CDirectXFramework(void)
@@ -112,6 +114,7 @@ void CDirectXFramework::Init(HWND& hWnd, HINSTANCE& hInst, bool bWindowed)
 	resourceManager->loadFromXMLFile("Resources.xml");
 	resourceManager->setCurrentScope(0);
 
+	soundResource = resourceManager->findResourcebyID(1);
 	//*************************************************************************
 
 	//////////////////////////////////////////////////////////////////////////
@@ -187,7 +190,7 @@ void CDirectXFramework::Update(float dt)
 	numFrames += 1.0f;
 
 	// Accumlate time passed
-	timeElapsed += dt;
+	timer = timeElapsed += dt;
 
 	//Compute frame stats once per second
 	if(timeElapsed >= 1.0f)
@@ -196,6 +199,12 @@ void CDirectXFramework::Update(float dt)
 
 		timeElapsed = 0.0f;
 		numFrames = 0.0f;
+	}
+
+	if(timer >= 1.0f)
+	{
+		AudioManager::GetInstance()->Play(soundResource->GetSound());
+		timer= 0;
 	}
 	// ************* End of frame count on screen *********************
 
