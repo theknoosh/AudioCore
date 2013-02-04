@@ -15,7 +15,7 @@
 
 
 cResourceManager* resourceManager = new cResourceManager();
-cResource* soundResource;
+cAudioResource* soundResource;
 int timer;
 
 
@@ -114,7 +114,7 @@ void CDirectXFramework::Init(HWND& hWnd, HINSTANCE& hInst, bool bWindowed)
 	resourceManager->loadFromXMLFile("Resources.xml");
 	resourceManager->setCurrentScope(0);
 
-	soundResource = resourceManager->findResourcebyID(1);
+	soundResource = (cAudioResource*)resourceManager->findResourcebyID(1);
 	//*************************************************************************
 
 	//////////////////////////////////////////////////////////////////////////

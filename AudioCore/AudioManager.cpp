@@ -173,7 +173,7 @@ void AudioManager::SetSFXVolume(float volume)
 
 //Instantiates variables every time cResourceManager finds an audio asset
 
-cAudioResource* AudioManager::loadResourceFromXML(TiXmlElement *Element)
+cResource* AudioManager::loadResourceFromXML(TiXmlElement *Element)
 {
 	if(Element)
 	{

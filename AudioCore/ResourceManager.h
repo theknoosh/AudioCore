@@ -45,7 +45,7 @@ public:
 	virtual ~cResource(){};
 	virtual void load(){};
 	virtual void unload(){};
-	virtual FMOD::Sound* GetSound() = 0;
+	
 
 	inline cResource()
 	{

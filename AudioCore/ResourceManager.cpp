@@ -66,7 +66,7 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 
 							if(AttribValue=="audio")
 							{	
-								aResource = AudioManager::GetInstance()->loadResourceFromXML(Element);
+								Resource = AudioManager::GetInstance()->loadResourceFromXML(Element);
 							}
 						}
 
@@ -95,12 +95,12 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 						m_Resources[Resource->m_Scope].push_back(Resource);
 						m_ResourceCount++;
 					}
-					if(aResource)
-					{
-						//Resources are added to map here
-						m_Resources[aResource->m_Scope].push_back(aResource);
-						m_ResourceCount++;
-					}
+					//if(aResource)
+					//{
+					//	//Resources are added to map here
+					//	m_Resources[aResource->m_Scope].push_back(aResource);
+					//	m_ResourceCount++;
+					//}
 				}
 			}
 			return true;

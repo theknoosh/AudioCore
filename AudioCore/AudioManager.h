@@ -65,7 +65,7 @@ public:
 	void SetBGMVolume(float volume);
 	void SetSFXVolume(float volume);
 
-	cAudioResource* loadResourceFromXML(TiXmlElement *Element);
+	cResource* loadResourceFromXML(TiXmlElement *Element);
 
 private:
 	static AudioManager* instance;	// Singleton instance
