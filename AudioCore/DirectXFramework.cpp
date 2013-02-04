@@ -108,7 +108,7 @@ void CDirectXFramework::Init(HWND& hWnd, HINSTANCE& hInst, bool bWindowed)
 	//////////////////////////////////////////////////////////////////////////
 	// Start resource manager
 	//////////////////////////////////////////////////////////////////////////
-	
+	AudioManager::GetInstance()->Initialize();
 	resourceManager->loadFromXMLFile("Resources.xml");
 	resourceManager->setCurrentScope(0);
 

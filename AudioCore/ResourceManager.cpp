@@ -65,7 +65,7 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 
 							if(AttribValue=="audio")
 							{	
-								Resource = g_audioManager->loadResourceFromXML(Element);
+								Resource = AudioManager::GetInstance()->loadResourceFromXML(Element);
 							}
 						}
 

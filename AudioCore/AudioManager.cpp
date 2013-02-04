@@ -229,11 +229,12 @@ void cAudioResource::load()
 	FMOD_RESULT result;
 	
 	result = AudioManager::GetInstance()->GetSystem()->
-		createSound(m_FileName.c_str(), mode, 0, &p_Sound);
+		createStream(m_FileName.c_str(), mode, 0, &p_Sound);
 
-	std::string thisthing = m_FileName.c_str();
 	// If sound loaded incorrectly, release it and set it to NULL
-	if(p_Sound != NULL)
+	if(result == FMOD_OK)
+		std::string thisthing = m_FileName.c_str();
+	else if(p_Sound != NULL)
 	{
 		p_Sound->release();
 		p_Sound = NULL;

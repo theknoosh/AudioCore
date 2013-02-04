@@ -81,7 +81,6 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLi
 	//*************************************************************************
 	// Initialize DirectX/Game here (call the Init method of your framwork)
 	myApp.Init(g_hWnd,g_hInstance,g_bWindowed);
-
 	//*************************************************************************
 
 	_int64 cntsPerSec = 0;
