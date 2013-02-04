@@ -40,6 +40,7 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 				if(Element)
 				{
 					cResource *Resource = NULL;
+					cAudioResource* aResource = NULL;
 
 					for(TiXmlAttribute* ElementAttrib = Element->FirstAttribute(); ElementAttrib; ElementAttrib = ElementAttrib->Next())
 					{
@@ -65,7 +66,7 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 
 							if(AttribValue=="audio")
 							{	
-								Resource = AudioManager::GetInstance()->loadResourceFromXML(Element);
+								aResource = AudioManager::GetInstance()->loadResourceFromXML(Element);
 							}
 						}
 
@@ -92,6 +93,12 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 					{
 						//Resources are added to map here
 						m_Resources[Resource->m_Scope].push_back(Resource);
+						m_ResourceCount++;
+					}
+					if(aResource)
+					{
+						//Resources are added to map here
+						m_Resources[aResource->m_Scope].push_back(aResource);
 						m_ResourceCount++;
 					}
 				}
