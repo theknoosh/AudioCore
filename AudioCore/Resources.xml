@@ -5,7 +5,7 @@
 <!-----------------------------------------AUDIO ASSETS -------------------------------->
 <!---------------------------------------------------------------------------------------->
 <resources>
-	 <resource UID="1" type="audio" filename="Audio\BombDrop.mp3" scenescope="0" audiotype="default"></resource>
+	 <resource UID="1" type ="texture" filename ="Textures\TeamATitle.png" scenescope = "0" width="800" height="600"></resource>
 	 <resource UID="2" type="audio" filename ="Audio\bull_1.mp3" scenescope="0" audiotype="default"></resource>
 	 <resource UID="3" type="audio" filename ="Audio\DrumLoop.mp3" scenescope="0" audiotype="default"></resource>
 	 <resource UID="4" type="audio" filename ="Audio\machineGunFire.mp3" scenescope="1" audiotype="default"></resource>
@@ -31,7 +31,7 @@
 	<!-----------------------------------------TEXTURE/IMAGES -------------------------------->
 	<!---------------------------------------------------------------------------------------->
 
-	<resource UID = "10" type = "texture" filename = "Audio\myGraphic.png" scenescope = "1" width="800" height="600"></resource>
+	<resource UID = "20" type = "texture" filename = "Textures\TeamATitle.png" scenescope = "0" width="800" height="600"></resource>
 	<resource UID = "11" type = "texture" filename = "myGraphic.png" scenescope = "1" width="800" height="600"></resource>
 
 </resources>

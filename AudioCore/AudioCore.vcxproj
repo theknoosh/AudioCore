@@ -67,6 +67,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="cTextureResource.cpp" />
     <ClCompile Include="DirectXFramework.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="tinystr.cpp" />
@@ -77,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="cTextureResource.h" />
     <ClInclude Include="DirectXFramework.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="tinystr.h" />

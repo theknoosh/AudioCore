@@ -19,6 +19,16 @@
 class cTextureResource :
 	public cResource
 {
+private:
+	IDirect3DTexture9* p_Texture;
+	LPDIRECT3DDEVICE9  p_Device;	// This is a temp device used to create the texture
+
+	/* 
+	This function turns the string variable "m_FileName" into an
+	wstring. Then it converts wstring into LPCWSTR, the variable type
+	needed to successfully create the texture variable 
+	*/
+	LPCWSTR StringToLPCWSTR(std::string s_Variable);
 public:
 	inline cTextureResource(void)
 	{
@@ -42,16 +52,5 @@ public:
 	// the texture. Needs to be loaded in from the Rendering Core's 
 	// D3DX Device
 	void SetDevice(LPDIRECT3DDEVICE9 D3DXDevice) {p_Device = D3DXDevice;}
-private:
-	IDirect3DTexture9* p_Texture;
-	LPDIRECT3DDEVICE9  p_Device;	// This is a temp device used to create the texture
-
-	/* 
-	This function turns the string variable "m_FileName" into an
-	wstring. Then it converts wstring into LPCWSTR, the variable type
-	needed to successfully create the texture variable 
-	*/
-	LPCWSTR StringToLPCWSTR(std::string s_Variable);
-
 };
 

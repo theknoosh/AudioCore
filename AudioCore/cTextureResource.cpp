@@ -2,12 +2,16 @@
 
 cTextureResource::~cTextureResource(void)
 {
-	unload();
+	if(p_Texture)
+	{
+		p_Texture->Release();
+		p_Texture = NULL;
+	}
 }
 
 void cTextureResource::load()
 {
-	D3DXCreateTextureFromFile(p_Device,StringToLPCWSTR(m_FileName),
+	D3DXCreateTextureFromFileA(p_Device,m_FileName.c_str(),
 		&p_Texture);
 }
 	

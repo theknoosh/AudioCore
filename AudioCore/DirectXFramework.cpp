@@ -12,10 +12,12 @@
 #include <time.h>
 #include <DxErr.h>
 #include "ResourceManager.h"
+#include "cTextureResource.h"
 
 
 cResourceManager* resourceManager = new cResourceManager();
 cAudioResource* soundResource;
+cTextureResource* textureResource;
 int timer;
 
 
@@ -114,7 +116,10 @@ void CDirectXFramework::Init(HWND& hWnd, HINSTANCE& hInst, bool bWindowed)
 	resourceManager->loadFromXMLFile("Resources.xml");
 	resourceManager->setCurrentScope(0);
 
-	soundResource = (cAudioResource*)resourceManager->findResourcebyID(1);
+	textureResource = (cTextureResource*)resourceManager->findResourcebyID(1);
+	textureResource->SetDevice(m_pD3DDevice);
+	textureResource->load();
+	soundResource = (cAudioResource*)resourceManager->findResourcebyID(2);
 	//*************************************************************************
 
 	//////////////////////////////////////////////////////////////////////////
@@ -259,7 +264,7 @@ void CDirectXFramework::Render()
 	m_pD3DDevice->BeginScene();
 	m_pD3DSprite->Begin(D3DXSPRITE_ALPHABLEND);
 
-	m_pD3DSprite->Draw(m_pTexture,NULL,NULL,&D3DXVECTOR3(0.0f,0.0f,0.0f),0xFFFFFFFF);
+	m_pD3DSprite->Draw(textureResource->GetTexture(),NULL,NULL,&D3DXVECTOR3(0.0f,0.0f,0.0f),0xFFFFFFFF);
 
 
 	m_pD3DSprite->Flush();

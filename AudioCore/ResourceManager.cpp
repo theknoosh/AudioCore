@@ -15,7 +15,6 @@ AudioManager* g_audioManager;
 
 
 
-
 //-------------------------------------------------------------------------------------
 //=====================================================================================
 //--------------------Load Resource from XML File -------------------------------------
@@ -61,7 +60,8 @@ bool cResourceManager::loadFromXMLFile(std::string Filename)
 
 							if(AttribValue=="texture")
 							{
-								//Resource = g_TextureManager->loadResourceFromXML(Element);  CTextureResource
+								Resource = AudioManager::GetInstance()->loadTResourceFromXML(Element);
+								//Resource = g_TextureManager.loadResourceFromXML(Element);  //CTextureResource
 							}
 
 							if(AttribValue=="audio")

@@ -1,35 +1,13 @@
-﻿Build started 2/3/2013 10:23:49 PM.
-     1>Project "C:\Users\Aaron\ResourceManager1\AudioCore\AudioCore.vcxproj" on node 2 (rebuild target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\AudioCore.lastbuildstate".
-       InitializeBuildStatus:
-         Creating "Debug\AudioCore.unsuccessfulbuild" because "AlwaysCreate" was specified.
+﻿Build started 2/6/2013 4:12:43 PM.
+     1>Project "C:\Users\Fligar\Desktop\AudioCore\AudioCore\AudioCore.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\AudioCore.unsuccessfulbuild".
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AudioManager.cpp DirectXFramework.cpp ResourceManager.cpp tinystr.cpp tinyxml.cpp tinyxmlerror.cpp tinyxmlparser.cpp WinMain.cpp
-         WinMain.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\aaron\resourcemanager1\audiocore\directxframework.h(27): warning C4005: 'DIRECTINPUT_VERSION' : macro redefinition
-                 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h(42) : see previous definition of 'DIRECTINPUT_VERSION'
-         tinyxmlparser.cpp
-         tinyxmlerror.cpp
-         tinyxml.cpp
-         tinystr.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ResourceManager.cpp
          ResourceManager.cpp
-         DirectXFramework.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\aaron\resourcemanager1\audiocore\directxframework.h(27): warning C4005: 'DIRECTINPUT_VERSION' : macro redefinition
-                 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h(42) : see previous definition of 'DIRECTINPUT_VERSION'
-     1>c:\users\aaron\resourcemanager1\audiocore\directxframework.cpp(139): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(283) : see declaration of 'wcscpy'
-     1>c:\users\aaron\resourcemanager1\audiocore\directxframework.cpp(42): warning C4101: 'ErrorMessage' : unreferenced local variable
-     1>c:\users\aaron\resourcemanager1\audiocore\directxframework.cpp(41): warning C4101: 'hr' : unreferenced local variable
-     1>c:\users\aaron\resourcemanager1\audiocore\directxframework.cpp(193): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\aaron\resourcemanager1\audiocore\directxframework.cpp(270): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-         AudioManager.cpp
-         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Aaron\ResourceManager1\Debug\AudioCore.exe" /NOLOGO dinput8.lib dxguid.lib strmiids.lib fmodex_vc.lib dxerr.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AudioCore.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Aaron\ResourceManager1\Debug\AudioCore.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Aaron\ResourceManager1\Debug\AudioCore.lib" /MACHINE:X86 Debug\AudioManager.obj
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Fligar\Desktop\AudioCore\Debug\AudioCore.exe" /NOLOGO dinput8.lib dxguid.lib strmiids.lib fmodex_vc.lib dxerr.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AudioCore.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Fligar\Desktop\AudioCore\Debug\AudioCore.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Fligar\Desktop\AudioCore\Debug\AudioCore.lib" /MACHINE:X86 Debug\AudioManager.obj
+         Debug\cTextureResource.obj
          Debug\DirectXFramework.obj
          Debug\ResourceManager.obj
          Debug\tinystr.obj
@@ -37,14 +15,15 @@
          Debug\tinyxmlerror.obj
          Debug\tinyxmlparser.obj
          Debug\WinMain.obj
-         AudioCore.vcxproj -> C:\Users\Aaron\ResourceManager1\Debug\AudioCore.exe
+         LINK : C:\Users\Fligar\Desktop\AudioCore\Debug\AudioCore.exe not found or not built by the last incremental link; performing full link
+         AudioCore.vcxproj -> C:\Users\Fligar\Desktop\AudioCore\Debug\AudioCore.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Aaron\ResourceManager1\Debug\AudioCore.exe;#1" /manifest Debug\AudioCore.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Fligar\Desktop\AudioCore\Debug\AudioCore.exe;#1" /manifest Debug\AudioCore.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file "Debug\AudioCore.unsuccessfulbuild".
          Touching "Debug\AudioCore.lastbuildstate".
-     1>Done Building Project "C:\Users\Aaron\ResourceManager1\AudioCore\AudioCore.vcxproj" (rebuild target(s)).
+     1>Done Building Project "C:\Users\Fligar\Desktop\AudioCore\AudioCore\AudioCore.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:15.69
+Time Elapsed 00:00:02.62
