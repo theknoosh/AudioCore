@@ -1,4 +1,4 @@
-AudioCore
+Resource Manager Core and AudioCore
 =========
 
 Devry GSP420 class project
